@@ -61,7 +61,7 @@ public class TestMultiplication {
 		// Test two number multiplications
 		int a = 7;
 		int b = 5;
-		int expectedANS = -35;
+		int expectedANS = 35;
 		ArrayList<Integer> array = new ArrayList<Integer>(Arrays.asList(a, b));
 
 		Factorization factorizationStub = mock(Factorization.class);
@@ -74,7 +74,7 @@ public class TestMultiplication {
 		assertEquals(expectedANS, actualANS);
 	}
 	
-	public void testMultiplicationWithStubMockitoAny() {
+	public void testMultiplicationWithStubMockitoGG() {
 		// Test two number multiplications
 		int a = 7;
 		int b = 5;
@@ -92,7 +92,7 @@ public class TestMultiplication {
 		assertEquals(expectedANS, actualANS);
 	}
 	
-	public void testMultiplicationWithStubMockitoAny() {
+	public void testMultiplicationWithStubMockitoGGG() {
 		// Test two number multiplications
 		int a = 7;
 		int b = 5;
