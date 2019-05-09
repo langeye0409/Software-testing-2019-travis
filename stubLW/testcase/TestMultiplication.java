@@ -73,6 +73,42 @@ public class TestMultiplication {
 
 		assertEquals(expectedANS, actualANS);
 	}
+	
+	public void testMultiplicationWithStubMockitoAny() {
+		// Test two number multiplications
+		int a = 7;
+		int b = 5;
+		int c = 3;
+		int expectedANS = 105;
+		ArrayList<Integer> array = new ArrayList<Integer>(Arrays.asList(a, b, c));
+
+		Factorization factorizationStub = mock(Factorization.class);
+		when(factorizationStub.factorization(expectedANS)).thenReturn(array);
+		when(factorizationStub.factorizationRoot(anyInt(), anyBoolean())).thenReturn(-1);
+
+		Multiplication multiplication = new Multiplication();
+		int actualANS = multiplication.multiplicationWithFactorization(factorizationStub, expectedANS, false);
+
+		assertEquals(expectedANS, actualANS);
+	}
+	
+	public void testMultiplicationWithStubMockitoAny() {
+		// Test two number multiplications
+		int a = 7;
+		int b = 5;
+		int c = 3;
+		int expectedANS = -1;
+		ArrayList<Integer> array = new ArrayList<Integer>(Arrays.asList(a));
+
+		Factorization factorizationStub = mock(Factorization.class);
+		when(factorizationStub.factorization(expectedANS)).thenReturn(array);
+		when(factorizationStub.factorizationRoot(anyInt(), anyBoolean())).thenReturn(-1);
+
+		Multiplication multiplication = new Multiplication();
+		int actualANS = multiplication.multiplicationWithFactorization(factorizationStub, expectedANS, false);
+
+		assertEquals(expectedANS, actualANS);
+	}
 /*
 	//@Test
 	public void testMultiplicationThreeNumberArrayList() {
