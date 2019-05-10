@@ -89,8 +89,7 @@ public class TestMultiplication {
 		when(factorizationStub.factorizationRoot(anyInt(), anyBoolean())).thenReturn(-1);
 
 		Multiplication multiplication = new Multiplication();
-		int actualANS = multiplication.multiplicationWithFactorization(factorizationStub, expectedANS, false);
-
+		int actualANS = multiplication.multiplicationWithFactorizationAbsolute(factorizationStub, expectedANS);
 		assertEquals(expectedANS, actualANS);
 	}
 	
