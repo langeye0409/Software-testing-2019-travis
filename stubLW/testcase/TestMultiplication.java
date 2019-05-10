@@ -74,6 +74,8 @@ public class TestMultiplication {
 		assertEquals(expectedANS, actualANS);
 	}
 	
+	
+	@Test
 	public void testMultiplicationWithStubMockitoGG() {
 		// Test two number multiplications
 		int a = 7;
