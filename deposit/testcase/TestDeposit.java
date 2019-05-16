@@ -42,7 +42,7 @@ public class TestDeposit {
 
 		Deposit deposit = new Deposit(1949);
 		String result = deposit.deposit(userA);
-		assertEquals("平成1年: " + (int) expected, result);
+		assertEquals("平成1年: " + (int)expected, result);
 	}
 
 	@Test
@@ -66,7 +66,7 @@ public class TestDeposit {
 		// 從二戰期間存40000元
 		// 利率都是10%
 		when(userA.depositAmount()).thenReturn(40000);
-		when(userA.depositInterest(anyInt())).thenReturn(0.03);
+		when(userA.depositInterest(anyInt())).thenReturn(0.10);
 		when(userA.expireEra()).thenReturn("昭和");
 		when(userA.expireYear()).thenReturn(20);
 		// when...
